@@ -1,8 +1,9 @@
-package com.alexeyyuditsky.github_search_app
+package com.alexeyyuditsky.github_search_app.presentation
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.commit
+import com.alexeyyuditsky.github_search_app.R
 
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
