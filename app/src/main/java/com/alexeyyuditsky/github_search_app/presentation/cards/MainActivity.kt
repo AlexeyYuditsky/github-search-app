@@ -1,4 +1,4 @@
-package com.alexeyyuditsky.github_search_app.presentation
+package com.alexeyyuditsky.github_search_app.presentation.cards
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
         if (savedInstanceState == null) {
             supportFragmentManager.commit {
-                add(R.id.fragmentContainer, SearchFragment())
+                add(R.id.fragmentContainer, CardsFragment())
             }
         }
     }

@@ -1,4 +1,4 @@
-package com.alexeyyuditsky.github_search_app.data.search.cloud.users
+package com.alexeyyuditsky.github_search_app.data.cards.cloud.users
 
 import com.squareup.moshi.Json
 

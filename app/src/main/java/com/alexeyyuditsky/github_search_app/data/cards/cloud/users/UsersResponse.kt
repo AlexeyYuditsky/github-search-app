@@ -1,14 +1,14 @@
-package com.alexeyyuditsky.github_search_app.data.search.cloud.users
+package com.alexeyyuditsky.github_search_app.data.cards.cloud.users
 
-import com.alexeyyuditsky.github_search_app.data.search.UserData
+import com.alexeyyuditsky.github_search_app.data.cards.Data
 
 data class UsersResponse(
     val items: List<UserCloud>,
 ) {
 
-    fun toUserData(): List<UserData> {
+    fun toUserData(): List<Data> {
         return items.map {
-            UserData(
+            Data.UserData(
                 it.avatarUrl,
                 it.login,
                 it.score
