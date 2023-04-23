@@ -16,7 +16,7 @@
         android:theme="@style/Githubsearchapp"
         tools:targetApi="33">
         <activity
-            android:name=".presentation.MainActivity"
+            android:name=".presentation.cards.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

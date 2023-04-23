@@ -1,7 +1,7 @@
 package com.alexeyyuditsky.github_search_app.sl.core
 
 import android.content.Context
-import com.alexeyyuditsky.github_search_app.data.search.cloud.SearchService
+import com.alexeyyuditsky.github_search_app.core.ResourceProvider
 import com.squareup.moshi.Moshi
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -12,8 +12,7 @@ import java.util.concurrent.TimeUnit
 object CoreModule {
 
     private lateinit var retrofit: Retrofit
-    lateinit var service: SearchService
-    // lateinit var resourceProvider: ResourceProvider
+    lateinit var resourceProvider: ResourceProvider
 
     fun init(context: Context) {
         val interceptor = HttpLoggingInterceptor().apply { level = HttpLoggingInterceptor.Level.BODY }
@@ -32,9 +31,7 @@ object CoreModule {
             .addConverterFactory(MoshiConverterFactory.create(moshi))
             .build()
 
-        service = retrofit.create(SearchService::class.java)
-
-        // resourceProvider = ResourceProvider.Base(context)
+        resourceProvider = ResourceProvider.Base(context)
     }
 
     fun <T> makeService(clazz: Class<T>): T {

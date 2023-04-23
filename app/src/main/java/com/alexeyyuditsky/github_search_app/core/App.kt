@@ -1,6 +1,8 @@
 package com.alexeyyuditsky.github_search_app.core
 
 import android.app.Application
+import com.alexeyyuditsky.github_search_app.sl.cards.CardsFactory
+import com.alexeyyuditsky.github_search_app.sl.cards.CardsModule
 import com.alexeyyuditsky.github_search_app.sl.core.CoreModule
 
 class App : Application() {
@@ -12,12 +14,8 @@ class App : Application() {
         coreModule.init(this)
     }
 
-    /*fun reposFactory(): ReposFactory {
-        return ReposFactory(ReposModule(coreModule))
+    fun cardsFactory(): CardsFactory {
+        return CardsFactory(CardsModule(coreModule))
     }
-
-    fun issuesFactory(): IssuesFactory {
-        return IssuesFactory(IssuesModule(coreModule))
-    }*/
 
 }
