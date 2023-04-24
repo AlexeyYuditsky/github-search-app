@@ -11,12 +11,14 @@ import androidx.recyclerview.widget.SimpleItemAnimator
 import com.alexeyyuditsky.github_search_app.R
 import com.alexeyyuditsky.github_search_app.core.App
 import com.alexeyyuditsky.github_search_app.databinding.FragmentCardsBinding
+import com.alexeyyuditsky.github_search_app.presentation.FragmentRouter
 
 class CardsFragment : Fragment(R.layout.fragment_cards) {
 
     private var _binding: FragmentCardsBinding? = null
     private val binding get() = _binding!!
 
+    private val fragmentRouter get() = (requireActivity() as FragmentRouter)
     private val viewModel by viewModels<CardsViewModel>(
         factoryProducer = { (requireActivity().application as App).cardsFactory() }
     )
@@ -68,10 +70,10 @@ class CardsFragment : Fragment(R.layout.fragment_cards) {
     }
 
     private fun initRecyclerView() {
-        val cardsAdapter = CardsAdapter {
-            val query = checkEditText()
-            if (query.isNotBlank()) viewModel.fetchCards(query)
-        }
+        val cardsAdapter = CardsAdapter(
+            retry = { val query = checkEditText(); if (query.isNotBlank()) viewModel.fetchCards(query) },
+            content = { login, repo, path -> fragmentRouter.showContent(login, repo, path) }
+        )
         binding.recyclerView.adapter = cardsAdapter
         binding.recyclerView.addItemDecoration(DividerItemDecoration(requireContext(), LinearLayout.VERTICAL))
         (binding.recyclerView.itemAnimator as SimpleItemAnimator).supportsChangeAnimations = false

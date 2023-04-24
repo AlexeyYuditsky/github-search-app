@@ -1,5 +1,7 @@
 package com.alexeyyuditsky.github_search_app.presentation.cards
 
+import com.alexeyyuditsky.github_search_app.presentation.TextMapper
+
 sealed class CardUi {
 
     open fun map(mapper: TextMapper) = Unit
@@ -30,19 +32,21 @@ sealed class CardUi {
         private val avatarUrl: String,
         override val title: String,
         private val score: Double,
-    ) : Info(title) {
+        private val htmlUrl: String,
+        ) : Info(title) {
         override fun map(mapper: TextMapper) {
-            mapper.map(avatarUrl, title, score.toString())
+            mapper.map(avatarUrl, title, score.toString(), htmlUrl)
         }
     }
 
     data class Repo(
+        private val userLogin: String,
         override val title: String,
         private val forksCount: Long,
         private val description: String,
     ) : Info(title) {
         override fun map(mapper: TextMapper) {
-            mapper.map(title, forksCount.toString(), description)
+            mapper.map(userLogin, title, forksCount.toString(), description)
         }
     }
 

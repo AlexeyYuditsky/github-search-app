@@ -5,5 +5,4 @@ import com.alexeyyuditsky.github_search_app.sl.core.BaseFactory
 
 class CardsFactory(
     cardsModule: CardsModule,
-) : BaseFactory<CardsViewModel>(cardsModule) {
-}
+) : BaseFactory<CardsViewModel>(cardsModule)

@@ -19,7 +19,7 @@ class CardsViewModel(
     val cardsLiveData: LiveData<List<CardUi>> get() = _cardsLiveData
 
     init {
-        fetchCards("Android")
+        fetchCards("kotlin repo")
     }
 
     fun fetchCards(query: String) = viewModelScope.launch {

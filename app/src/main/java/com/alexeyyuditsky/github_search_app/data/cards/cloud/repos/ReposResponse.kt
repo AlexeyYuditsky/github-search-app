@@ -9,6 +9,7 @@ data class ReposResponse(
     fun toRepoData(): List<Data> {
         return items.map {
             Data.RepoData(
+                it.login.substringBefore('/'),
                 it.name,
                 it.forksCount,
                 it.description ?: ""
@@ -17,4 +18,3 @@ data class ReposResponse(
     }
 
 }
-

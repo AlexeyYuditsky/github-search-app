@@ -29,8 +29,8 @@ sealed class CardsData : Abstract.DataToDomain<CardsDomain> {
         private fun toDomain(cardsList: List<Data>): List<CardDomain> {
             return cardsList.map {
                 when (it) {
-                    is Data.UserData -> CardDomain.User(it.userAvatarUrl, it.userLogin, it.userScore)
-                    is Data.RepoData -> CardDomain.Repo(it.repoName, it.repoForksCount, it.repoDescription)
+                    is Data.UserData -> CardDomain.User(it.userAvatarUrl, it.userLogin, it.userScore, it.userHtmlUrl)
+                    is Data.RepoData -> CardDomain.Repo(it.userLogin, it.repoName, it.repoForksCount, it.repoDescription)
                 }
             }
         }

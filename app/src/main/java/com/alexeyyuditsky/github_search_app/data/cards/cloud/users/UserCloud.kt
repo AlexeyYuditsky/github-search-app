@@ -7,5 +7,7 @@ data class UserCloud(
     val avatarUrl: String,
     val login: String,
     val score: Double,
+    @field:Json(name = "html_url")
+    val htmlUrl: String,
 )
 

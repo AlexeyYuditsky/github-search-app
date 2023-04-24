@@ -11,7 +11,8 @@ data class UsersResponse(
             Data.UserData(
                 it.avatarUrl,
                 it.login,
-                it.score
+                it.score,
+                it.htmlUrl
             )
         }
     }

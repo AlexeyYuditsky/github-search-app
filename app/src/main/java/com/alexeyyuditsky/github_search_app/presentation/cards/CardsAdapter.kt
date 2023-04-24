@@ -10,9 +10,11 @@ import com.alexeyyuditsky.github_search_app.databinding.ItemRepoBinding
 import com.alexeyyuditsky.github_search_app.databinding.ItemUserBinding
 
 typealias RetryClickListener = () -> Unit
+typealias ContentClickListener = (login: String, repo: String, path: String) -> Unit
 
 class CardsAdapter(
     private val retry: RetryClickListener,
+    private val content: ContentClickListener,
 ) : RecyclerView.Adapter<CardViewHolder>() {
 
     private val cards = mutableListOf<CardUi>()
@@ -45,7 +47,7 @@ class CardsAdapter(
 
             R.layout.item_repo -> {
                 val binding = ItemRepoBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-                CardViewHolder.Repo(binding)
+                CardViewHolder.Repo(binding, content)
             }
 
             R.layout.item_fail -> {

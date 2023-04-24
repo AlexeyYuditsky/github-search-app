@@ -19,8 +19,8 @@ sealed class CardsDomain : Abstract.DomainToUi<CardsUi> {
         private fun toUi(list: List<CardDomain>): List<CardUi> {
             return list.map {
                 when (it) {
-                    is CardDomain.User -> CardUi.User(it.avatarUrl, it.login, it.score)
-                    is CardDomain.Repo -> CardUi.Repo(it.name, it.forksCount, it.description)
+                    is CardDomain.User -> CardUi.User(it.avatarUrl, it.login, it.score, it.htmlUrl)
+                    is CardDomain.Repo -> CardUi.Repo(it.userLogin, it.name, it.forksCount, it.description)
                 }
             }
         }
