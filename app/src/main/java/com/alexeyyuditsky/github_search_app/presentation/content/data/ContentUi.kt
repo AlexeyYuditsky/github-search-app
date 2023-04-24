@@ -1,4 +1,4 @@
-package com.alexeyyuditsky.github_search_app.presentation.content
+package com.alexeyyuditsky.github_search_app.presentation.content.data
 
 import com.alexeyyuditsky.github_search_app.presentation.TextMapper
 

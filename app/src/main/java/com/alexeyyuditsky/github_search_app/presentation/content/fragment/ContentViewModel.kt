@@ -1,4 +1,4 @@
-package com.alexeyyuditsky.github_search_app.presentation.content
+package com.alexeyyuditsky.github_search_app.presentation.content.fragment
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.alexeyyuditsky.github_search_app.core.ResourceProvider
 import com.alexeyyuditsky.github_search_app.domain.content.ContentInteractor
+import com.alexeyyuditsky.github_search_app.presentation.content.data.ContentUi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext

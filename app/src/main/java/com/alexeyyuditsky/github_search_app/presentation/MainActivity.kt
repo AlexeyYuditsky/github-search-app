@@ -5,8 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.commit
 import com.alexeyyuditsky.github_search_app.R
 import com.alexeyyuditsky.github_search_app.core.Const.pathToFile
-import com.alexeyyuditsky.github_search_app.presentation.cards.CardsFragment
-import com.alexeyyuditsky.github_search_app.presentation.content.ContentFragment
+import com.alexeyyuditsky.github_search_app.presentation.cards.fragment.CardsFragment
+import com.alexeyyuditsky.github_search_app.presentation.content.fragment.ContentFragment
+import com.alexeyyuditsky.github_search_app.presentation.content.fragment.WebViewFragment
 
 class MainActivity : AppCompatActivity(R.layout.activity_main), FragmentRouter {
 

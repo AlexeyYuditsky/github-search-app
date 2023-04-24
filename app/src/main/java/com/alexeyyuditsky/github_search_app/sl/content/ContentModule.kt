@@ -4,7 +4,7 @@ import com.alexeyyuditsky.github_search_app.data.content.ContentRepository
 import com.alexeyyuditsky.github_search_app.data.content.cloud.ContentCloudDataSource
 import com.alexeyyuditsky.github_search_app.data.content.cloud.ContentService
 import com.alexeyyuditsky.github_search_app.domain.content.ContentInteractor
-import com.alexeyyuditsky.github_search_app.presentation.content.ContentViewModel
+import com.alexeyyuditsky.github_search_app.presentation.content.fragment.ContentViewModel
 import com.alexeyyuditsky.github_search_app.sl.core.BaseModule
 import com.alexeyyuditsky.github_search_app.sl.core.CoreModule
 

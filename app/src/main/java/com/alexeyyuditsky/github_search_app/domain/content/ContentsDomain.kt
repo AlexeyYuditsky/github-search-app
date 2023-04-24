@@ -3,8 +3,8 @@ package com.alexeyyuditsky.github_search_app.domain.content
 import com.alexeyyuditsky.github_search_app.core.Abstract
 import com.alexeyyuditsky.github_search_app.core.ErrorType
 import com.alexeyyuditsky.github_search_app.core.ResourceProvider
-import com.alexeyyuditsky.github_search_app.presentation.content.ContentUi
-import com.alexeyyuditsky.github_search_app.presentation.content.ContentsUi
+import com.alexeyyuditsky.github_search_app.presentation.content.data.ContentUi
+import com.alexeyyuditsky.github_search_app.presentation.content.data.ContentsUi
 
 sealed class ContentsDomain : Abstract.DomainToUi<ContentsUi> {
 

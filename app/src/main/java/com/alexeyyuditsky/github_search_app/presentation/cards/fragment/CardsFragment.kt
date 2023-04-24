@@ -1,4 +1,4 @@
-package com.alexeyyuditsky.github_search_app.presentation.cards
+package com.alexeyyuditsky.github_search_app.presentation.cards.fragment
 
 import android.os.Bundle
 import android.view.View
@@ -12,6 +12,8 @@ import com.alexeyyuditsky.github_search_app.R
 import com.alexeyyuditsky.github_search_app.core.App
 import com.alexeyyuditsky.github_search_app.databinding.FragmentCardsBinding
 import com.alexeyyuditsky.github_search_app.presentation.FragmentRouter
+import com.alexeyyuditsky.github_search_app.presentation.cards.adapter.CardsAdapter
+import com.alexeyyuditsky.github_search_app.presentation.cards.data.CardUi
 
 class CardsFragment : Fragment(R.layout.fragment_cards) {
 

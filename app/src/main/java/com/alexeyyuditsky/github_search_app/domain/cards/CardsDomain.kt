@@ -3,8 +3,8 @@ package com.alexeyyuditsky.github_search_app.domain.cards
 import com.alexeyyuditsky.github_search_app.core.Abstract
 import com.alexeyyuditsky.github_search_app.core.ErrorType
 import com.alexeyyuditsky.github_search_app.core.ResourceProvider
-import com.alexeyyuditsky.github_search_app.presentation.cards.CardUi
-import com.alexeyyuditsky.github_search_app.presentation.cards.CardsUi
+import com.alexeyyuditsky.github_search_app.presentation.cards.data.CardUi
+import com.alexeyyuditsky.github_search_app.presentation.cards.data.CardsUi
 
 sealed class CardsDomain : Abstract.DomainToUi<CardsUi> {
 

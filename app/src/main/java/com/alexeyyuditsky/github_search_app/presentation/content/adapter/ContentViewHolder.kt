@@ -1,4 +1,4 @@
-package com.alexeyyuditsky.github_search_app.presentation.content
+package com.alexeyyuditsky.github_search_app.presentation.content.adapter
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
@@ -6,6 +6,7 @@ import com.alexeyyuditsky.github_search_app.databinding.ItemDirBinding
 import com.alexeyyuditsky.github_search_app.databinding.ItemFailBinding
 import com.alexeyyuditsky.github_search_app.databinding.ItemFileBinding
 import com.alexeyyuditsky.github_search_app.presentation.TextMapper
+import com.alexeyyuditsky.github_search_app.presentation.content.data.ContentUi
 
 abstract class ContentViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 

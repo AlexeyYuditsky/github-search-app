@@ -1,4 +1,4 @@
-package com.alexeyyuditsky.github_search_app.presentation.cards
+package com.alexeyyuditsky.github_search_app.presentation.cards.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -8,6 +8,8 @@ import com.alexeyyuditsky.github_search_app.R
 import com.alexeyyuditsky.github_search_app.databinding.ItemFailBinding
 import com.alexeyyuditsky.github_search_app.databinding.ItemRepoBinding
 import com.alexeyyuditsky.github_search_app.databinding.ItemUserBinding
+import com.alexeyyuditsky.github_search_app.presentation.cards.data.CardUi
+import com.alexeyyuditsky.github_search_app.presentation.cards.data.DiffUtilCallback
 
 typealias RetryClickListener = () -> Unit
 typealias ContentClickListener = (login: String, repo: String, path: String) -> Unit

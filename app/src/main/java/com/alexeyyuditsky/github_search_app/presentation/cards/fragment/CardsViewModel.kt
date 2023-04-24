@@ -1,4 +1,4 @@
-package com.alexeyyuditsky.github_search_app.presentation.cards
+package com.alexeyyuditsky.github_search_app.presentation.cards.fragment
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.alexeyyuditsky.github_search_app.core.ResourceProvider
 import com.alexeyyuditsky.github_search_app.domain.cards.CardsInteractor
+import com.alexeyyuditsky.github_search_app.presentation.cards.data.CardUi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -19,7 +20,7 @@ class CardsViewModel(
     val cardsLiveData: LiveData<List<CardUi>> get() = _cardsLiveData
 
     init {
-        fetchCards("kotlin repo")
+        fetchCards("android")
     }
 
     fun fetchCards(query: String) = viewModelScope.launch {

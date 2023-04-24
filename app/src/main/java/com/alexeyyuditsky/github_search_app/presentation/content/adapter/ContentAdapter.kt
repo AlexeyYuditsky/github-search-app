@@ -1,4 +1,4 @@
-package com.alexeyyuditsky.github_search_app.presentation.content
+package com.alexeyyuditsky.github_search_app.presentation.content.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -8,6 +8,8 @@ import com.alexeyyuditsky.github_search_app.R
 import com.alexeyyuditsky.github_search_app.databinding.ItemDirBinding
 import com.alexeyyuditsky.github_search_app.databinding.ItemFailBinding
 import com.alexeyyuditsky.github_search_app.databinding.ItemFileBinding
+import com.alexeyyuditsky.github_search_app.presentation.content.data.ContentUi
+import com.alexeyyuditsky.github_search_app.presentation.content.data.DiffUtilCallback
 
 typealias RetryClickListener = () -> Unit
 typealias DirClickListener = (path: String) -> Unit

@@ -1,4 +1,4 @@
-package com.alexeyyuditsky.github_search_app.presentation.content
+package com.alexeyyuditsky.github_search_app.presentation.content.fragment
 
 import android.os.Bundle
 import android.view.View
@@ -15,6 +15,7 @@ import com.alexeyyuditsky.github_search_app.core.Const.login
 import com.alexeyyuditsky.github_search_app.core.Const.repo
 import com.alexeyyuditsky.github_search_app.databinding.FragmentContentBinding
 import com.alexeyyuditsky.github_search_app.presentation.FragmentRouter
+import com.alexeyyuditsky.github_search_app.presentation.content.adapter.ContentAdapter
 
 class ContentFragment : Fragment(R.layout.fragment_content) {
 

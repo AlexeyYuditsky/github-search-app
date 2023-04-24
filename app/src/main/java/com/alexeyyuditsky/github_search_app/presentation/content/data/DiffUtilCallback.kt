@@ -1,10 +1,10 @@
-package com.alexeyyuditsky.github_search_app.presentation.cards
+package com.alexeyyuditsky.github_search_app.presentation.content.data
 
 import androidx.recyclerview.widget.DiffUtil
 
 class DiffUtilCallback(
-    private val oldList: List<CardUi>,
-    private val newList: List<CardUi>,
+    private val oldList: List<ContentUi>,
+    private val newList: List<ContentUi>,
 ) : DiffUtil.Callback() {
 
     override fun getOldListSize(): Int = oldList.size

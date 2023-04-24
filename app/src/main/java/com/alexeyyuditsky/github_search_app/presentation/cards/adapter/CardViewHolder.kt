@@ -1,4 +1,4 @@
-package com.alexeyyuditsky.github_search_app.presentation.cards
+package com.alexeyyuditsky.github_search_app.presentation.cards.adapter
 
 import android.content.Intent
 import android.net.Uri
@@ -9,6 +9,7 @@ import com.alexeyyuditsky.github_search_app.databinding.ItemFailBinding
 import com.alexeyyuditsky.github_search_app.databinding.ItemRepoBinding
 import com.alexeyyuditsky.github_search_app.databinding.ItemUserBinding
 import com.alexeyyuditsky.github_search_app.presentation.TextMapper
+import com.alexeyyuditsky.github_search_app.presentation.cards.data.CardUi
 import com.bumptech.glide.Glide
 
 abstract class CardViewHolder(view: View) : RecyclerView.ViewHolder(view) {
