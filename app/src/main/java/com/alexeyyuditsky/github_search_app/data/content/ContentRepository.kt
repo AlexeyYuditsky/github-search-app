@@ -20,7 +20,6 @@ interface ContentRepository {
                     ContentsData.Success(content)
                 }
             } catch (e: Exception) {
-                log("exception = ${e.message}")
                 ContentsData.Fail(e)
             }
         }
